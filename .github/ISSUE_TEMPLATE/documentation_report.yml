@@ -98,7 +98,10 @@ body:
       *Issue Tracker** button to go directly to the GitHub issues.
 
       [`ansible/ansible-documentation`]: /ansible/ansible-documentation
-      [collections-index]: https://docs.ansible.com/ansible/latest/collections/index.html
+
+      [collections-index]:
+      https://docs.ansible.com/ansible/latest/collections/index.html
+
     placeholder: lib/ansible/modules/copy.py
   validations:
     required: true
