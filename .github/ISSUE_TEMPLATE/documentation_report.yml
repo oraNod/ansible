@@ -55,6 +55,7 @@ body:
       If available in the collection documentation, select the
       *Issue Tracker** button to go directly to the GitHub issues.
 
+
       [ansible/ansible-documentation]: /ansible/ansible-documentation
 
       [collections index]:
