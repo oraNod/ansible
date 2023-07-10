@@ -100,7 +100,8 @@ body:
       [collections-index]:
       https://docs.ansible.com/ansible/latest/collections/index.html
 
-      [ansible/ansible-documentation]: /ansible/ansible-documentation
+      [ansible/ansible-documentation]:
+      /ansible/ansible-documentation
 
     placeholder: lib/ansible/modules/copy.py
   validations:
