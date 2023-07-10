@@ -91,13 +91,13 @@ body:
       in this (`ansible/ansible`) repository.
       The Installation Guide, Playbook Guide, Developer Guide,
       and other documentation is available in the
-      [`ansible/ansible-documentation`] repository.
+      [`ansible/ansible-documentation`][docs-repo] repository.
       Documentation for other modules/plugins/etc is likely to be
       available in one of the [Ansible Collections][collections-index].
       If available in the collection documentation, select the
       *Issue Tracker** button to go directly to the GitHub issues.
 
-      [`ansible/ansible-documentation`]: /ansible/ansible-documentation
+      [docs-repo]: /ansible/ansible-documentation
 
       [collections-index]:
       https://docs.ansible.com/ansible/latest/collections/index.html
