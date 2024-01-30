@@ -1,32 +1,42 @@
-  Test module
 
-OPTIONS (= inicates it is required):
+        Test module
 
-- with_suboptions  An option with suboptions.
-                    Use with care.
+OPTIONS (= is mandatory):
+
+- with_suboptions
+        An option with suboptions.
+        Use with care.
         default: null
         type: dict
-        suboptions:
 
-        - a_first          The first suboption.
-          default: null
-          type: str
+        SUBOPTIONS:
 
-        - m_middle          The suboption in the middle.
-                     Has its own suboptions.
-          default: null
-          suboptions:
-
-          - a_suboption            A sub-suboption.
+        - a_first
+            The first suboption.
             default: null
             type: str
 
-        - z_last          The last suboption.
-          default: null
-          type: str
+        - m_middle
+            The suboption in the middle.
+            Has its own suboptions.
+            default: null
+
+            SUBOPTIONS:
+
+            - a_suboption
+                A sub-suboption.
+                default: null
+                type: str
+
+        - z_last
+            The last suboption.
+            default: null
+            type: str
+
 
 AUTHOR: Ansible Core Team
 
 EXAMPLES:
+
 
 

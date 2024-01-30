@@ -32,7 +32,6 @@
                     "type": "str"
                 }
             },
-            "plugin_name": "testns.testcol.noop_vars_plugin",
             "short_description": "Do NOT load host and group vars",
             "vars": "noop_vars_plugin"
         },

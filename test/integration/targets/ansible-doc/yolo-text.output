@@ -1,11 +1,13 @@
-> TEST testns.testcol.yolo (./collections/ansible_collections/testns/testcol/plugins/test/yolo.yml)
+> TESTNS.TESTCOL.YOLO    (./collections/ansible_collections/testns/testcol/plugins/test/yolo.yml)
 
-  This is always true
+        This is always true
 
-OPTIONS (= inicates it is required):
+OPTIONS (= is mandatory):
 
-= _input  does not matter
+= _input
+        does not matter
         type: raw
+
 
 SEE ALSO:
       * Module ansible.builtin.test
@@ -31,13 +33,15 @@ SEE ALSO:
            Some foo bar.
            https://docs.ansible.com/ansible-core/devel/#stq=foo_bar&stp=1
 
+
 NAME: yolo
 
 EXAMPLES:
+
 {{ 'anything' is yolo }}
 
+
 RETURN VALUES:
-
-- output  always true
+- output
+        always true
         type: boolean
-
