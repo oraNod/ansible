@@ -22,29 +22,45 @@ options:
       - Aliases were added in 2.18, to support using C(auto={{ansible_facts['pkg_mgr']}})
     default: ['auto']
     choices:
-        auto: Depending on O(strategy), will match the first or all package managers provided, in order
-        rpm: For RPM based distros, requires RPM Python bindings, not installed by default on Suse (python3-rpm)
-        yum: Alias to rpm
-        dnf: Alias to rpm
-        dnf5: Alias to rpm
-        zypper: Alias to rpm
-        apt: For DEB based distros, C(python-apt) package must be installed on targeted hosts
-        portage: Handles ebuild packages, it requires the C(qlist) utility, which is part of 'app-portage/portage-utils'
-        pkg: libpkg front end (FreeBSD)
-        pkg5: Alias to pkg
-        pkgng: Alias to pkg
-        pacman: Archlinux package manager/builder
-        apk: Alpine Linux package manager
-        pkg_info: OpenBSD package manager
-        openbsd_pkg: Alias to pkg_info
+      - auto
+      - rpm
+      - yum
+      - dnf
+      - dnf5
+      - zypper
+      - apt
+      - portage
+      - pkg
+      - pkg5
+      - pkgng
+      - pacman
+      - apk
+      - pkg_info
+      - openbsd_pkg
+    choice_descriptions:
+      - auto: Depending on O(strategy), will match the first or all package managers provided, in order
+      - rpm: For RPM based distros, requires RPM Python bindings, not installed by default on Suse (python3-rpm)
+      - yum: Alias to rpm
+      - dnf: Alias to rpm
+      - dnf5: Alias to rpm
+      - zypper: Alias to rpm
+      - apt: For DEB based distros, C(python-apt) package must be installed on targeted hosts
+      - portage: Handles ebuild packages, it requires the C(qlist) utility, which is part of 'app-portage/portage-utils'
+      - pkg: libpkg front end (FreeBSD)
+      - pkg5: Alias to pkg
+      - pkgng: Alias to pkg
+      - pacman: Archlinux package manager/builder
+      - apk: Alpine Linux package manager
+      - pkg_info: OpenBSD package manager
+      - openbsd_pkg: Alias to pkg_info
     type: list
     elements: str
   strategy:
     description:
       - This option controls how the module queries the package managers on the system.
     choices:
-        first: returns only information for the first supported package manager available.
-        all: returns information for all supported and available package managers on the system.
+      - first: returns only information for the first supported package manager available.
+      - all: returns information for all supported and available package managers on the system.
     default: 'first'
     type: str
     version_added: "2.8"
