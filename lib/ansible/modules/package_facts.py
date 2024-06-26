@@ -20,47 +20,31 @@ options:
       - The V(apk) option was added in version 2.11.
       - The V(pkg_info)' option was added in version 2.13.
       - Aliases were added in 2.18, to support using C(auto={{ansible_facts['pkg_mgr']}})
-      - Descriptions for each choice are as follows:
-      - C(auto): Depending on O(strategy), will match the first or all package managers provided, in order.
-      - C(rpm): For RPM based distros, requires RPM Python bindings, not installed by default on Suse (python3-rpm).
-      - C(yum): Alias to rpm.
-      - C(dnf): Alias to rpm.
-      - C(dnf5): Alias to rpm.
-      - C(zypper): Alias to rpm.
-      - C(apt): For DEB based distros, C(python-apt) package must be installed on targeted hosts.
-      - C(portage): Handles ebuild packages, it requires the C(qlist) utility, which is part of 'app-portage/portage-utils'.
-      - C(pkg): libpkg front end (FreeBSD).
-      - C(pkg5): Alias to pkg.
-      - C(pkgng): Alias to pkg.
-      - C(pacman): Archlinux package manager/builder.
-      - C(apk): Alpine Linux package manager.
-      - C(pkg_info): OpenBSD package manager.
-      - C(openbsd_pkg): Alias to pkg_info.
     default: ['auto']
     choices:
-      - auto
-      - rpm
-      - yum
-      - dnf
-      - dnf5
-      - zypper
-      - apt
-      - portage
-      - pkg
-      - pkg5
-      - pkgng
-      - pacman
-      - apk
-      - pkg_info
-      - openbsd_pkg
+        auto: Depending on O(strategy), will match the first or all package managers provided, in order.
+        rpm: For RPM based distros, requires RPM Python bindings, not installed by default on Suse C(python3-rpm).
+        yum: Alias to C(rpm)
+        dnf: Alias to C(rpm)
+        dnf5: Alias to C(rpm)
+        zypper: Alias to C(rpm)
+        apt: For DEB based distros, C(python-apt) package must be installed on targeted hosts
+        portage: Handles ebuild packages, it requires the C(qlist) utility, which is part of 'app-portage/portage-utils'
+        pkg: libpkg front end C(FreeBSD)
+        pkg5: Alias to C(pkg)
+        pkgng: Alias to C(pkg)
+        pacman: Archlinux package manager/builder
+        apk: Alpine Linux package manager
+        pkg_info: OpenBSD package manager
+        openbsd_pkg: Alias to C(pkg_info)
     type: list
     elements: str
   strategy:
     description:
       - This option controls how the module queries the package managers on the system.
     choices:
-      - first: returns only information for the first supported package manager available.
-      - all: returns information for all supported and available package managers on the system.
+        first: returns only information for the first supported package manager available.
+        all: returns information for all supported and available package managers on the system.
     default: 'first'
     type: str
     version_added: "2.8"
