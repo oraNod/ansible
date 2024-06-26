@@ -22,14 +22,14 @@ options:
       - Aliases were added in 2.18, to support using C(auto={{ansible_facts['pkg_mgr']}})
     default: ['auto']
     choices:
-        auto: Depending on O(strategy), will match the first or all package managers provided, in order.
-        rpm: For RPM based distros, requires RPM Python bindings, not installed by default on Suse C(python3-rpm).
+        auto: Depending on O(strategy) will match the first or all package managers provided in order.
+        rpm: Requires RPM Python bindings for RPM based distros and not installed by default on Suse C(python3-rpm).
         yum: Alias to C(rpm)
         dnf: Alias to C(rpm)
         dnf5: Alias to C(rpm)
         zypper: Alias to C(rpm)
-        apt: For DEB based distros, C(python-apt) package must be installed on targeted hosts
-        portage: Handles ebuild packages, it requires the C(qlist) utility, which is part of 'app-portage/portage-utils'
+        apt: C(python-apt) package must be installed on targeted hosts for Debian based distros
+        portage: Handles ebuild packages and requires the C(qlist) utility available from 'app-portage/portage-utils'
         pkg: libpkg front end C(FreeBSD)
         pkg5: Alias to C(pkg)
         pkgng: Alias to C(pkg)
