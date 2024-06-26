@@ -20,6 +20,22 @@ options:
       - The V(apk) option was added in version 2.11.
       - The V(pkg_info)' option was added in version 2.13.
       - Aliases were added in 2.18, to support using C(auto={{ansible_facts['pkg_mgr']}})
+      - Descriptions for each choice are as follows:
+      - C(auto): Depending on O(strategy), will match the first or all package managers provided, in order.
+      - C(rpm): For RPM based distros, requires RPM Python bindings, not installed by default on Suse (python3-rpm).
+      - C(yum): Alias to rpm.
+      - C(dnf): Alias to rpm.
+      - C(dnf5): Alias to rpm.
+      - C(zypper): Alias to rpm.
+      - C(apt): For DEB based distros, C(python-apt) package must be installed on targeted hosts.
+      - C(portage): Handles ebuild packages, it requires the C(qlist) utility, which is part of 'app-portage/portage-utils'.
+      - C(pkg): libpkg front end (FreeBSD).
+      - C(pkg5): Alias to pkg.
+      - C(pkgng): Alias to pkg.
+      - C(pacman): Archlinux package manager/builder.
+      - C(apk): Alpine Linux package manager.
+      - C(pkg_info): OpenBSD package manager.
+      - C(openbsd_pkg): Alias to pkg_info.
     default: ['auto']
     choices:
       - auto
@@ -37,22 +53,6 @@ options:
       - apk
       - pkg_info
       - openbsd_pkg
-    choice_descriptions:
-      - auto: Depending on O(strategy), will match the first or all package managers provided, in order
-      - rpm: For RPM based distros, requires RPM Python bindings, not installed by default on Suse (python3-rpm)
-      - yum: Alias to rpm
-      - dnf: Alias to rpm
-      - dnf5: Alias to rpm
-      - zypper: Alias to rpm
-      - apt: For DEB based distros, C(python-apt) package must be installed on targeted hosts
-      - portage: Handles ebuild packages, it requires the C(qlist) utility, which is part of 'app-portage/portage-utils'
-      - pkg: libpkg front end (FreeBSD)
-      - pkg5: Alias to pkg
-      - pkgng: Alias to pkg
-      - pacman: Archlinux package manager/builder
-      - apk: Alpine Linux package manager
-      - pkg_info: OpenBSD package manager
-      - openbsd_pkg: Alias to pkg_info
     type: list
     elements: str
   strategy:
