@@ -33,7 +33,7 @@ options:
         pkg: libpkg front end C(FreeBSD)
         pkg5: Alias to C(pkg)
         pkgng: Alias to C(pkg)
-        pacman: Archlinux package manager/builder
+        pacman: Archlinux package manager and builder
         apk: Alpine Linux package manager
         pkg_info: OpenBSD package manager
         openbsd_pkg: Alias to C(pkg_info)
