@@ -295,7 +295,7 @@ notes:
     removal the module is unable to detect that the group is installed
     U(https://bugzilla.redhat.com/show_bug.cgi?id=1620324).
   - While O(use_backend=yum) and the ability to call the action plugin as
-    M(ansible.builtin.yum) are provided for syntax compatibility, the YUM
+    `ansible.builtin.yum` are provided for syntax compatibility, the YUM
     backend was removed in ansible-core 2.17 because the required libraries are
     not available for any supported version of Python. If you rely on this
     functionality, use an older version of Ansible.
